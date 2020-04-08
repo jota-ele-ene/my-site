@@ -97,7 +97,7 @@ var BgComponent = Vue.extend({
           vm.error = error; 
         });
     },
-    getOrentation() {
+    getOrientation() {
     	if( document.documentElement.clientWidth > document.documentElement.clientHeight  ) {
             return "landscape";
         }
