@@ -7,42 +7,40 @@
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 
     <link href="css/static.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Quantico" rel="stylesheet">
 
-    <script  src="https://unpkg.com/vue@2.5.21/dist/vue.js"></script>
+ 
+    <script src="js/misc.js"></script>
+    <script src="js/vueapps.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.min.js"></script>
+
+    <script src="js/templates" type="text/x-template" id="background-image"></script> 
+
 
 </head>
 
 <body>
 
-    <div class="title">
-	    <span>{{ greeting }}</span>
-	</div>
+  <div class="title" v-cloak> 
+    <span>{{ greeting }}</span> 
+  </div>
 
-    <div class="bg">
-        <transition name="fade">
-          <div v-if="first" class="image" :style="{ backgroundImage: 'url(' + imageFirst + ')' }" @mouseover="cancelTo()" @mouseout="loop()"></div>
-        </transition>
-        <transition name="fade">
-          <div v-if="!first" class="image" :style="{ backgroundImage: 'url(' + imageSecond + ')' }" @mouseover="cancelTo()" @mouseout="loop()"></div>
-        </transition>
-    </div>
+  <div class="bg"> 
+    <background-image refer="first"></background-image>    <background-image refer="second"></background-image> 
+  </div>
 
-    <!--
+  <!--
     <div id="muzak">
-	<audio autoplay loop>
-  	    <source src="xmas.mp3">
-	</audio>	
+      <audio autoplay loop>
+        <source src="xmas.mp3">
+      </audio>	
     </div>
-    --> 
-	
-    <script src="js/static.js"></script>
+  -->
 
-    <!-- particles.js container -->
-    <!--
+  <!-- particles.js container -->
+  <!--
     <div id="particles-js"></div>
     <script src="js/particles.js"></script>
-    -->
+  -->
 	
 </body>
 
