@@ -1,4 +1,4 @@
-document.write('<script type="text/javascript" src="./js/temporary.js" ></script>');
+document.write('<script type="text/javascript" src="js/temporary.js" ></script>');
 
 var appTitle = new Vue({
   el: ".title",
