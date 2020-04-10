@@ -7,7 +7,32 @@ var appTitle = new Vue({
 
 
 var BgComponent = Vue.extend({ 
-  template: '#background-image',
+template: `
+  <div  class="container">  
+    
+    <transition name="fade" v-on:after-enter="imageLoadedAndShowed">  
+      <div v-if="active" @mouseover="disallowToggle" @transitionend="allowToggle"
+           :style="{ backgroundImage: 'url(' + imageSrc + ')' }" 
+     :class="{image_showed: imageShowed, image: true}">  
+      </div> 
+    </transition>
+
+  <div v-if="active" id="credits-box"> 
+    <div :class="{out : showCredits}">
+    <i  @mouseover="showCredits = !showCredits" class="fas fa-info-circle"></i>
+    </div>  
+    <transition name="slide-fade1"> 
+      <div v-if="showCredits" class="credits">
+        <div class="font-credits">
+            <span @click="showCredits = !showCredits">Photo credits: <a :href="imageUserName" target="_blank"> {{imageFullName}}</a> via <a :href="imageUnsplash" target="_blank" >Unsplash</a></span>
+          <a :href="imageSrc" rel="nofollow" download><i class="fas fa-download"></i></a></div>
+      </div>
+    </transition>
+
+  </div>
+
+</container>
+`,
   data: function () {
     return { 
       active:false,
