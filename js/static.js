@@ -85,6 +85,7 @@ var BgComponent = Vue.extend({
               img.src = evt.target.result;
               this.imageStatus = "loaded";
               this.imageShowed = false;
+		console.log("emiting imageLoaded: "+this.$attrs['refer']):
               hub.$emit('imageLoaded', this.$attrs['refer']);
             }
             reader.onerror = evt => {
@@ -136,6 +137,7 @@ var bgApp = new Vue({
      	  this.$children[1].toggle();  
     }, 
     loadFirstImage: function (refer) {
+	    console.log("loadFirstImage: "+refer):
       if (refer = "first")
         this.$children[0].toggle();  
       else
