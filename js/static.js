@@ -30,10 +30,12 @@ var BgComponent = Vue.extend({
   },
   methods: {
     toggle() { 
+	console.log("entering toggle - refer: "+this.$attrs['refer']+"; active: "+this.active+"; canToggle: "+this.canToggle);
       if (this.canToggle) {
         this.active = !this.active;  
         if (!this.active) this.loadImage();
       }
+	console.log("exiting toggle - refer: "+this.$attrs['refer']+"; active: "+this.active+"; canToggle: "+this.canToggle);
     },
     allowToggle() {
      if (this.scaling) {
