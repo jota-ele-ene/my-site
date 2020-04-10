@@ -1,5 +1,3 @@
-import 'temporary.js';
-
 var appTitle = new Vue({
   el: ".title",
   data: {
@@ -58,8 +56,9 @@ var BgComponent = Vue.extend({
       var vm = this;
       var app_id = 'FcB-Vxj7c1UWtfsK7U1rKQvl9UFtkRgBbJxfA0ND4T0'
       //var url = 'https://api.unsplash.com/photos/random?client_id=' + app_id;    
-      var url = getRandomImageDataURL();    
-      fetch(url+`&content_filter=high&orientation=`+this.getOrientation())
+      var url = getRandomImageDataURL();
+      //fetch(url+`&content_filter=high&orientation=`+this.getOrientation())
+      fetch(url)
         .then((res) => res.json())
         .then((res) => {
           vm.imageStatus = "dataLoaded";
