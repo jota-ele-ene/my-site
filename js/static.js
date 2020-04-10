@@ -1,4 +1,4 @@
-document.write('<script type="text/javascript" src="js/temporary.js" ></script>');
+import 'temporary.js';
 
 var appTitle = new Vue({
   el: ".title",
