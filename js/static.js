@@ -55,12 +55,12 @@ template: `
   },
   methods: {
     toggle() { 
-	console.log("entering toggle - refer: "+this.$attrs['refer']+"; active: "+this.active+"; canToggle: "+this.canToggle);
+	//console.log("entering toggle - refer: "+this.$attrs['refer']+"; active: "+this.active+"; canToggle: "+this.canToggle);
       if (this.canToggle) {
         this.active = !this.active;  
         if (!this.active) this.loadImage();
       }
-	console.log("exiting toggle - refer: "+this.$attrs['refer']+"; active: "+this.active+"; canToggle: "+this.canToggle);
+	//console.log("exiting toggle - refer: "+this.$attrs['refer']+"; active: "+this.active+"; canToggle: "+this.canToggle);
     },
     allowToggle() {
      if (this.scaling) {
@@ -82,10 +82,10 @@ template: `
     loadImage() {
       var vm = this;
       var app_id = 'FcB-Vxj7c1UWtfsK7U1rKQvl9UFtkRgBbJxfA0ND4T0'
-      //var url = 'https://api.unsplash.com/photos/random?client_id=' + app_id;    
-      var url = getRandomImageDataURL();
-      //fetch(url+`&content_filter=high&orientation=`+this.getOrientation())
-      fetch(url)
+      var url = 'https://api.unsplash.com/photos/random?client_id=' + app_id;    
+      //var url = getRandomImageDataURL();
+      //fetch(url)
+      fetch(url+`&content_filter=high&orientation=`+this.getOrientation())
         .then((res) => res.json())
         .then((res) => {
           vm.imageStatus = "dataLoaded";
@@ -164,7 +164,7 @@ var bgApp = new Vue({
      	  this.$children[1].toggle();  
     }, 
     loadFirstImage: function (refer) {
-	    console.log("loadFirstImage: "+refer);
+	    //console.log("loadFirstImage: "+refer);
       if (refer = "first")
         this.$children[0].toggle();  
       else
@@ -185,17 +185,6 @@ var bgApp = new Vue({
 		hub.$once('imageLoaded', this.loadFirstImage);
 	}
 }) 
-
-
-function getRandomImageDataURL() {
-
-  var randomimages = [ "5e866592f4dba3539aac05dd","5e8665d53f724453b57b335e","5e8665fdf4dba3539aac0624","5e86662df4dba3539aac0637","5e86664f4c047153946f3ce0","5e86666c4c047153946f3cf0","5e8666944c047153946f3d03","5e8666b8f4dba3539aac066d","5e8666de3f724453b57b33d6","5e8667023f724453b57b33e5"]; 
-  var fake =
-    "https://api.jsonbin.io/b/" +
-    randomimages[Math.floor(Math.random() * 10)];
-
-  return fake;
-}
 
 
 
