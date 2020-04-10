@@ -85,7 +85,7 @@ var BgComponent = Vue.extend({
               img.src = evt.target.result;
               this.imageStatus = "loaded";
               this.imageShowed = false;
-		console.log("emiting imageLoaded: "+this.$attrs['refer']):
+		console.log("emiting imageLoaded: "+this.$attrs['refer']);
               hub.$emit('imageLoaded', this.$attrs['refer']);
             }
             reader.onerror = evt => {
