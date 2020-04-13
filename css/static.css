@@ -45,9 +45,10 @@ body {
   font-family: "Quantico", sans-serif;
   position: absolute;
   color: white;
-  z-index: 10;
-  margin: 1em;
-  font-size: xx-large;
+  margin: 4em auto;
+  font-size: 7em;
+  width: 100%;
+  text-align: center;
 }
 .fade-enter-active,
 .fade-leave-active {
