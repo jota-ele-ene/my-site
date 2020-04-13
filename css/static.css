@@ -49,6 +49,7 @@ body {
   font-size: 7em;
   width: 100%;
   text-align: center;
+	z-index:10;
 }
 .fade-enter-active,
 .fade-leave-active {
