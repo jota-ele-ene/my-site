@@ -109,8 +109,8 @@ body {
   display:inline-block;
 }
 @media all and (max-width: 1024px) {
-  .credits-box {
-    font-size:3em;
+  #credits-box {
+    font-size:4em;
   }
 }
 #credits-box a{
