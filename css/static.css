@@ -105,6 +105,7 @@ body {
   padding:5px;
   font-family:Dosis,monospace,sans-serif;
   display:inline-block;
+  font-size:1em;
 }
 #credits-box a{
   color:black;
