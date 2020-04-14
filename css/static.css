@@ -109,7 +109,10 @@ body {
   display:inline-block;
 }
 @media all and (max-width: 1024px) {
-  #credits-box {
+  .fa-info-circle {
+    font-size:4em;
+  }
+  .credits {
     font-size:4em;
   }
 }
