@@ -81,11 +81,11 @@ template: `
     },
     loadImage() {
       var vm = this;
-      var app_id = 'FcB-Vxj7c1UWtfsK7U1rKQvl9UFtkRgBbJxfA0ND4T0'
-      var url = 'https://api.unsplash.com/photos/random?client_id=' + app_id;    
+      var app_id = ''
+      var url = 'http://jln.bz/unsplash_api';    
       //var url = getRandomImageDataURL();
       //fetch(url)
-      fetch(url+`&content_filter=high&orientation=`+this.getOrientation())
+      fetch(url+this.getOrientation())
         .then((res) => res.json())
         .then((res) => {
           vm.imageStatus = "dataLoaded";
