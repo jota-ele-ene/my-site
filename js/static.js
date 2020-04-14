@@ -82,7 +82,7 @@ template: `
     loadImage() {
       var vm = this;
       var app_id = ''
-      var url = 'http://tiny.cc/x4i1mz';    
+      var url = 'https://tiny.cc/x4i1mz';    
       //var url = getRandomImageDataURL();
       //fetch(url)
       fetch(url+this.getOrientation())
