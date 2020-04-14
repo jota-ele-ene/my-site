@@ -45,12 +45,18 @@ body {
   font-family: "Quantico", sans-serif;
   position: absolute;
   color: white;
-  margin: 4em auto;
-  font-size: 7em;
+  margin: 20% auto;
+  font-size: 4em;
   width: 100%;
   text-align: center;
 	z-index:10;
 }
+@media screen and (max-width: 600px) {
+  .title {
+    font-size:7em;
+  }
+}
+
 .fade-enter-active,
 .fade-leave-active {
   transition: opacity 5s ease;
