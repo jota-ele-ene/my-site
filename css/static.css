@@ -109,9 +109,9 @@ body {
   display:inline-block;
 }
 @media all and (max-width: 1024px) {
-.disable-dbl-tap-zoom {
-  touch-action: manipulation;
-}	
+  * {
+      touch-action: manipulation;
+  }
   .fa-info-circle {
     font-size:4em;
   }
