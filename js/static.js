@@ -82,7 +82,7 @@ template: `
     loadImage() {
       var vm = this;
       var app_id = ''
-      var url = 'http://jln.bz/unsplash_api';    
+      var url = 'https://jln.bz/unsplash_api';    
       //var url = getRandomImageDataURL();
       //fetch(url)
       fetch(url+this.getOrientation())
