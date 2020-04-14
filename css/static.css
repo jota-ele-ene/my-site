@@ -110,7 +110,7 @@ body {
 }
 @media all and (max-width: 1024px) {
   .credits {
-    font-size:2.4em;
+    font-size:3em;
   }
 }
 #credits-box a{
