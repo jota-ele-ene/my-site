@@ -26,7 +26,7 @@ template: `
       <div v-if="showCredits" class="credits">
         <div class="font-credits">
             <span @click="showCredits = !showCredits">Photo credits: <a :href="imageUserName" target="_blank"> {{imageFullName}}</a> via <a :href="imageUnsplash" target="_blank" >Unsplash</a></span>
-          <a :href="imageSrc" rel="nofollow" download><i class="fas fa-download"></i></a></div>
+          <a :href="imageSrc" @click="download_request" rel="nofollow" download><i class="fas fa-arrow-alt-circle-down"></i></a></div>
       </div>
     </transition>
 
@@ -47,6 +47,7 @@ template: `
       imageFullName: '',
       imageUrl: '',
       imageSrc: '',
+      imageDownload: '',
       imageSize: '',
       imageUnsplash: '',
       imageLocation: '',
@@ -95,6 +96,7 @@ template: `
           vm.imageUserName = "https://unsplash.com/@"+res.user.username;
           vm.imageFullName = res.user.name;
           vm.imageUrl = res.urls.regular;
+          vm.imageDownload = res.links.download_location;
           vm.imageSize = res.width + "x" + res.height;
           vm.imageUnsplash = res.links.html;
           vm.imageLocation = res.location.name;
@@ -127,6 +129,11 @@ template: `
           vm.imageStatus = 'dataLoadingError'; 
           vm.error = error; 
         });
+    },
+    download_request() {
+	fetch(this.imageDownload).catch(function (error) {
+          console.log("download_request(): error:"+error);
+        });;          
     },
     getOrientation() {
     	if( document.documentElement.clientWidth > document.documentElement.clientHeight  ) {
