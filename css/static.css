@@ -7,6 +7,9 @@
 .ca-menu li i{
   color:white;
 }
+.ca-more{
+    display:grid;
+}
 .ca-menu{
     z-index:10;
     position:relative;
@@ -25,6 +28,7 @@
     -ms-transition: all 400ms linear;
     transition: all 400ms linear;
 }
+
 .ca-menu li:last-child{
     margin-right: 0px;
 }
@@ -66,6 +70,15 @@
     font-size: 2.2em;
 }
 
+@media all and (max-width: 1024px) {
+.ca-menu li{
+    width: 100px;
+    height: 100px;
+}
+.ca-icon{
+    font-size: 3.4em;
+  }
+}
 
 
 [v-cloak] {
