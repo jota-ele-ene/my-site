@@ -67,7 +67,6 @@
     font-size: 1.6em;
 }
 .ca-menu li:hover .think-big {
-    color: white;
     font-size: 2.3em;
 }
 .ca-menu li:hover{
@@ -82,7 +81,6 @@
     margin-top:0;
 }
 .ca-menu li:hover .ca-icon{
-    color: #555;
     font-size: 2.2em;
 }
 
