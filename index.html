@@ -12,9 +12,42 @@
 
 <body>
 
-  <div class="title" v-cloak> 
-    <span>{{ greeting }}</span> 
+<div class="title-div" v-cloak>  
+  <div @mouseover="showMenu = !showMenu" class="title">
+    <span>{{ greeting }}</span>
   </div>
+    <div v-if="showMenu" class="ca-more">
+      <ul class="ca-menu">
+        <li> 
+          <a href="https://twitter.com/jota_ele_ene"><span class="ca-icon"><i class="fab fa-twitter"></i></span></a>        
+        </li>
+        <li> 
+          <a href="https://twitter.com/jota_ele_ene"><span class="ca-icon"><i class="fab fa-linkedin"></i></span></a>        
+        </li>
+        <li> 
+          <a href="https://twitter.com/jota_ele_ene"><span class="ca-icon"><i class="far fa-envelope"></i></span></a>        
+        </li>
+        <li> 
+          <a href="https://twitter.com/jota_ele_ene"><span class="ca-icon"><i class="fab fa-github"></i></span></a>        
+        </li>
+  </ul>
+     <ul class="ca-menu">
+
+        <li> 
+          <a href="https://twitter.com/jota_ele_ene"><span class="ca-icon"><i class="fab fa-codepen"></i></span></a>        
+        </li>
+        <li> 
+          <a href="https://twitter.com/jota_ele_ene"><span class="ca-icon"><i class="fab fa-btc"></i></span></a>        
+        </li>
+        <li> 
+          <a href="https://twitter.com/jota_ele_ene"><span class="ca-icon"><i class="fab fa-goodreads"></i></span></a>        
+        </li>
+        <li> 
+          <a href="https://twitter.com/jota_ele_ene"><span class="ca-icon"><i class="fab fa-medium"></i></span></a>        
+        </li>
+       </ul>
+    </div> 
+</div>
 
   <div class="bg"> 
     <background-image refer="first"></background-image>  
