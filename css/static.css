@@ -2,6 +2,7 @@
 @import url("https://fonts.googleapis.com/css?family=Quantico");
 @import url("https://fonts.googleapis.com/css?family=Roboto+Slab:wght@600&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Dosis");
+@import url("https://empresas.blogthinkbig.com/wp-content/themes/thinkbig/fonts/elephnt-webfont.woff2");
 
 
 .ca-menu li i{
@@ -53,6 +54,9 @@
     -o-transition: all 400ms linear;
     -ms-transition: all 400ms linear;
     transition: all 400ms linear;
+}
+.think-big {
+    font-family: 'elephantregular';
 }
 .ca-menu li:hover{
     border-color: #fff;
