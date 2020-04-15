@@ -8,9 +8,6 @@
 .ca-menu li i{
   color:white;
 }
-.ca-more{
-    display:grid;
-}
 .ca-menu{
     z-index:10;
     position:relative;
@@ -61,6 +58,10 @@
     margin-top: 0.1em;
     font-size: 1.6em;
 }
+.ca-menu li:hover .think-big {
+    color: #555;
+    font-size: 2.3em;
+}
 .ca-menu li:hover{
     border-color: #fff;
     -webkit-transform: rotate(360deg);
@@ -78,6 +79,9 @@
 }
 
 @media all and (max-width: 1024px) {
+.ca-more{
+    display:grid;
+}
 .ca-menu li{
     width: 100px;
     height: 100px;
