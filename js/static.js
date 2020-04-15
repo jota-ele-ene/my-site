@@ -1,7 +1,8 @@
 var appTitle = new Vue({
-  el: ".title",
+  el: ".title-div",
   data: {
-    greeting: "Hello World!"
+    greeting: "Hello World!",
+    showMenu: false
   }
 });
 
