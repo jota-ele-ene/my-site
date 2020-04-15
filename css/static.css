@@ -1,5 +1,6 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css");
 @import url("https://fonts.googleapis.com/css?family=Quantico");
+@import url("https://fonts.googleapis.com/css?family=Roboto+Slab:wght@600&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Dosis");
 
 [v-cloak] {
@@ -44,7 +45,7 @@ body {
   }
 }
 .title {
-  font-family: "Quantico", sans-serif;
+  font-family: "Roboto Slab", sans-serif;
   position: absolute;
   color: white;
   margin: 16% auto;
@@ -105,7 +106,7 @@ body {
   background-color:white;
   border-radius:6px;
   padding:5px;
-  font-family:Dosis,monospace,sans-serif;
+  font-family:sans-serif;
   display:inline-block;
   font-size:1em;
 }
