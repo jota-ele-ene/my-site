@@ -13,10 +13,11 @@
 <body>
 
 <div class="title-div" v-cloak>  
-  <div @mouseover="showMenu = !showMenu" class="title">
-    <span>{{ greeting }}</span>
+<!--  <div @mouseover="showMenu = !showMenu" class="title"> -->
+  <div class="title">
+      <span>{{ greeting }}</span>
   </div>
-    <div v-if="showMenu" class="ca-more">
+    <div v-if="!showMenu" class="ca-more">
       <ul class="ca-menu">
         <li> 
           <a href="https://twitter.com/jota_ele_ene"><span class="ca-icon"><i class="fab fa-twitter"></i></span></a>        
