@@ -57,6 +57,9 @@
 }
 .think-big {
     font-family: 'elephantregular';
+    color: white;
+    margin-top: 0.1em;
+    font-size: 1.6em;
 }
 .ca-menu li:hover{
     border-color: #fff;
