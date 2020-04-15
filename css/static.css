@@ -47,7 +47,7 @@ body {
   font-family: "Quantico", sans-serif;
   position: absolute;
   color: white;
-  margin: 20% auto;
+  margin: 16% auto;
   font-size: 4em;
   width: 100%;
   text-align: center;
@@ -94,12 +94,12 @@ body {
 }
 .fa-info-circle {
   color:white;
+  font-size:1.3em;
 }
 #credits-box {
   z-index: 10;  position:absolute;
   bottom:1em;
   right:1em;
-  font-size:1em;
 }
 .credits {
   background-color:white;
@@ -107,6 +107,7 @@ body {
   padding:5px;
   font-family:Dosis,monospace,sans-serif;
   display:inline-block;
+  font-size:1em;
 }
 @media all and (max-width: 1024px) {
   * {
