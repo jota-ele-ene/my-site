@@ -19,10 +19,10 @@ template: `
     </transition>
 
   <div v-if="active" id="credits-box"> 
-    <div :class="{out : showCredits}">
+    <div :class="{out : noFaInfo}">
     <i  @mouseover="showCredits = !showCredits" class="fas fa-info-circle"></i>
     </div>  
-    <transition name="slide-fade1"> 
+    <transition name="slide-fade1" v-on:enter="noFaInfo=true" v-on:after-leave="noFaInfo=false"> 
       <div v-if="showCredits" class="credits">
         <div class="font-credits">
             <span @click="showCredits = !showCredits">Photo credits: <a :href="imageUserName" target="_blank"> {{imageFullName}}</a> via <a :href="imageUnsplash" target="_blank" >Unsplash</a></span>
@@ -38,6 +38,7 @@ template: `
     return { 
       active:false,
       showCredits: false,
+      noFaInfo: false,
       imageShowed: true,
       scaling:false,
       canToggle:true,
