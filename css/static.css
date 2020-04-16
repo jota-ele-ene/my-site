@@ -1,7 +1,7 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css");
 
-@import url("css/title.css");
-@import url("css/background.css");
+@import url("title.css");
+@import url("background.css");
 
 
 [v-cloak] {
