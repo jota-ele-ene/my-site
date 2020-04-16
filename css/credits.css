@@ -1,0 +1,56 @@
+/* Styles for Image Credits */
+
+.top-center {
+  z-index:10;
+  position: fixed;
+  top: 0;
+  left:50%;  
+}
+.bottom-right {
+  z-index:10;
+  position: fixed;
+  bottom: 0;
+  right;0;
+}
+
+.fade1-enter-active, .fade1-leave-active {
+  transition: opacity 2s;
+}
+.fade1-enter, .fade1-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
+}
+
+.out {
+  display:none;
+}
+.fa-info-circle {
+  color:white;
+  font-size:1.3em;
+}
+#credits-box {
+  z-index: 10;  position:absolute;
+  bottom:1em;
+  right:1em;
+}
+.credits {
+  background-color:white;
+  border-radius:6px;
+  padding:5px;
+  font-family:sans-serif;
+  display:inline-block;
+  font-size:1em;
+}
+@media all and (max-width: 1024px) {
+  * {
+      touch-action: manipulation;
+  }
+  .fa-info-circle {
+    font-size:4em;
+  }
+  .credits {
+    font-size:3em;
+  }
+}
+#credits-box a{
+  color:black;
+}
