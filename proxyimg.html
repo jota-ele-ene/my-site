@@ -16,25 +16,22 @@
 
 <script>
 
-console.log (" url = "+GetURLParameter('url'));
-  document.getElementById("demo").innerHTML = GetURLParameter('url');
-
-window.location.replace(GetURLParameter('url')+"?client_id=FcB-Vxj7c1UWtfsK7U1rKQvl9UFtkRgBbJxfA0ND4T0");
-
-
-function GetURLParameter(sParam)
-{
+    var sURL = "";
     var sPageURL = window.location.search.substring(1);
     var sURLVariables = sPageURL.split('&');
     for (var i = 0; i < sURLVariables.length; i++) 
     {
         var sParameterName = sURLVariables[i].split('=');
-        if (sParameterName[0] == sParam) 
+        if (sParameterName[0] == "url") 
         {
-            return sParameterName[1];
+            sURL = sParameterName[1];
         }
     }
-}​;
+
+console.log (" url = "+sURL);
+  document.getElementById("demo").innerHTML = sURL;
+
+window.location.replace(GetURLParameter('url')+"?client_id=FcB-Vxj7c1UWtfsK7U1rKQvl9UFtkRgBbJxfA0ND4T0");
 
 
 </script>
