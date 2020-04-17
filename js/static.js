@@ -1,10 +1,26 @@
+const profile = Vue.component('profile', {
+ props: ['profile'],
+ template: `<a :href="profile.link"><span class="ca-icon" v-html="profile.icon" :class="profile.class"></span></a>` 
+ });
+
 var appTitle = new Vue({
   el: ".title-div",
   data: {
     greeting: "Hello World!",
-    showMenu: true
+    showMenu: true,
+    links1: [
+     {id: 1, active: true, link: "https://twitter.com/jota_ele_ene", icon: "<i class='fab fa-twitter'></i>", class: ""},
+     {id: 2, active: true, link: "https://www.linkedin.com/in/jotaeleene/", icon: "<i class='fab fa-linkedin'></i>", class: ""},
+     {id: 3, active: true, link: "https://medium.com/@jota_ele_ene", icon: "<i class='fab fa-medium'></i>", class: ""},
+     {id: 4, active: true, link: "https://empresas.blogthinkbig.com/author/jose-luis-nunez-diaz/", icon: "T", class: "think-big"}
+    ],
+    links2: [
+     {id: 2, active: true, link: "https://github.com/jota-ele-ene/", icon: "<i class='fab fa-github'></i>", class: ""},
+     {id: 3, active: true, link: "https://codepen.io/jota_ele_ene", icon: "<i class='fab fa-codepen'></i>", class: ""},
+    ]
   }
 });
+
 
 
 var BgComponent = Vue.extend({ 
