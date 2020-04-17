@@ -12,14 +12,12 @@
 
 <body>
 
-And this is how you can use this function assuming the URL is, http://dummy.com/?technology=jquery&blog=jquerybyexample:
-
-var tech = GetURLParameter('technology');
-var blog = `
+<div id="demo"></div>
 
 <script>
 
 console.log (" url = "+GetURLParameter('url'));
+  document.getElementById("demo").innerHTML = GetURLParameter('url');
 
 window.location.replace(GetURLParameter('url')+"?client_id=FcB-Vxj7c1UWtfsK7U1rKQvl9UFtkRgBbJxfA0ND4T0");
 
