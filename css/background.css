@@ -7,9 +7,9 @@ html {
   overflow: hidden;
 }
 body {
-	background: linear-gradient(20deg, #eeeeee, #555555, #888888, #aaaaaa);
+	background: linear-gradient(20deg, #e7e3e3, #e7e3e3, #994, #993);
 	background-size: 400% 400%;
-	animation: gradient 35s ease infinite;
+	animation: gradient 5s ease infinite;
 }
 @keyframes gradient {
 	0% { background-position: 0% 50%; }
