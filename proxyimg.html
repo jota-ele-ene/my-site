@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>José Luis Núñez</title>
+
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+    <link href="css/static.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body>
+
+And this is how you can use this function assuming the URL is, http://dummy.com/?technology=jquery&blog=jquerybyexample:
+
+var tech = GetURLParameter('technology');
+var blog = `
+
+<script>
+
+console.log (" url = "+GetURLParameter('url'));
+
+window.location.replace(GetURLParameter('url')+"?client_id=FcB-Vxj7c1UWtfsK7U1rKQvl9UFtkRgBbJxfA0ND4T0");
+
+
+function GetURLParameter(sParam)
+{
+    var sPageURL = window.location.search.substring(1);
+    var sURLVariables = sPageURL.split('&');
+    for (var i = 0; i < sURLVariables.length; i++) 
+    {
+        var sParameterName = sURLVariables[i].split('=');
+        if (sParameterName[0] == sParam) 
+        {
+            return sParameterName[1];
+        }
+    }
+}​
+
+
+</script>
+
+
+</body>
+
+</html>

@@ -148,7 +148,7 @@ template: `
         });
     },
     download_request() {
-	fetch(this.imageDownload).catch(function (error) {
+	fetch("proxyimg.html?url="+encodeURI(this.imageDownload)).catch(function (error) {
           console.log("download_request(): error:"+error);
         });;          
     },
