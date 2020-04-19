@@ -34,9 +34,9 @@ template: `
       </div> 
     </transition>
 
-  <div style="top: 0; right: 0; position: fixed; height: 50px; width: 50px;">
-    <a :href="imageSrc" @click="download_request" rel="nofollow" download></a>
-  </div>
+  <a style="top: 0; right: 0; position: fixed; height: 50px; width: 50px;" 
+     :href="imageSrc" @click="download_request" rel="nofollow" download>
+  </a>
 
   <div v-if="active" id="credits-box"> 
     <div :class="{out : noFaInfo}">
