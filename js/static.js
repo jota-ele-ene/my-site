@@ -1,6 +1,6 @@
-BackgroundCheck.init({
-  targets: '.ca-icon,.title'
-});
+//BackgroundCheck.init({
+//  targets: '.ca-icon,.title'
+//});
 
 
 const profile = Vue.component('profile', {
