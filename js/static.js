@@ -42,7 +42,7 @@ template: `
       <div v-if="showCredits" class="credits">
         <div class="font-credits">
             <span @click="showCredits = !showCredits">Photo credits: <a :href="imageUserName" target="_blank"> {{imageFullName}}</a> via <a :href="imageUnsplash" target="_blank" >Unsplash</a></span>
-          <a :href="imageSrc" @click="download_request" rel="nofollow" download><i class="fas fa-arrow-alt-circle-down"></i></a></div>
+          <!--<a :href="imageSrc" @click="download_request" rel="nofollow" download><i class="fas fa-arrow-alt-circle-down"></i></a></div>-->
       </div>
     </transition>
 
