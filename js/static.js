@@ -1,3 +1,8 @@
+BackgroundCheck.init({
+  targets: '.ca-icon,.title'
+});
+
+
 const profile = Vue.component('profile', {
  props: ['profile'],
  template: `<a :href="profile.link"><span class="ca-icon" v-html="profile.icon" :class="profile.class"></span></a>` 
