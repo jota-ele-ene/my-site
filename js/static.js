@@ -34,6 +34,10 @@ template: `
       </div> 
     </transition>
 
+  <div style="top: 0; right: 0; position: fixed; height: 50px; width: 50px;">
+    <a :href="imageSrc" @click="download_request" rel="nofollow" download></a>
+  </div>
+
   <div v-if="active" id="credits-box"> 
     <div :class="{out : noFaInfo}">
     <i  @mouseover="showCredits = !showCredits" class="fas fa-info-circle"></i>
