@@ -17,9 +17,10 @@ var appTitle = new Vue({
      {id: 1, active: true, link: "https://twitter.com/jota_ele_ene", icon: "<i class='fab fa-twitter'></i>", class: ""},
      {id: 2, active: true, link: "https://www.linkedin.com/in/jotaeleene/", icon: "<i class='fab fa-linkedin'></i>", class: ""},
      {id: 3, active: true, link: "https://medium.com/@jota_ele_ene", icon: "<i class='fab fa-medium'></i>", class: ""},
-     {id: 4, active: true, link: "https://empresas.blogthinkbig.com/author/jose-luis-nunez-diaz/", icon: "T", class: "think-big"}
+     {id: 4, active: true, link: "https://refind.com/jota_ele_ene", icon: "<span style='text-align: center;'><img src='/images/Refind.png' width='35'></span>", class: ""}
     ],
     links2: [
+     {id: 1, active: true, link: "https://empresas.blogthinkbig.com/author/jose-luis-nunez-diaz/", icon: "T", class: "think-big"},
      {id: 2, active: true, link: "https://github.com/jota-ele-ene/", icon: "<i class='fab fa-github'></i>", class: ""},
      {id: 3, active: true, link: "https://codepen.io/jota_ele_ene", icon: "<i class='fab fa-codepen'></i>", class: ""},
     ]
