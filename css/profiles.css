@@ -63,11 +63,15 @@
     color: white;
     margin-top: 0.15em;
 }
+.refind img{
+    width: 50%;
+    margin-top: 0.2em;
+}
 .ca-menu li:hover .think-big {
     font-size: 2.3em;
 }
 .ca-menu li:hover .refind img {
-    width: 35px;
+    width: 65%;
 }
 .ca-menu li:hover{
     border-color: #fff;
