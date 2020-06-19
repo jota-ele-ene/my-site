@@ -17,7 +17,7 @@ var appTitle = new Vue({
      {id: 1, active: true, link: "https://twitter.com/jota_ele_ene", icon: "<i class='fab fa-twitter'></i>", class: ""},
      {id: 2, active: true, link: "https://www.linkedin.com/in/jotaeleene/", icon: "<i class='fab fa-linkedin'></i>", class: ""},
      {id: 3, active: true, link: "https://medium.com/@jota_ele_ene", icon: "<i class='fab fa-medium'></i>", class: ""},
-     {id: 4, active: true, link: "https://refind.com/jota_ele_ene", icon: "<span style='text-align: center;'><img src='/images/Refind.png' width='35'></span>", class: ""}
+     {id: 4, active: true, link: "https://refind.com/jota_ele_ene", icon: "<img src='/images/Refind.png' style='width: 25px;margin-top: 5px;'>", class: "refind"}
     ],
     links2: [
      {id: 1, active: true, link: "https://empresas.blogthinkbig.com/author/jose-luis-nunez-diaz/", icon: "T", class: "think-big"},

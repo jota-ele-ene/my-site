@@ -66,6 +66,9 @@
 .ca-menu li:hover .think-big {
     font-size: 2.3em;
 }
+.ca-menu li:hover .refind img {
+    width: 35px;
+}
 .ca-menu li:hover{
     border-color: #fff;
     -webkit-transform: rotate(360deg);
