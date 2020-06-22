@@ -20,9 +20,10 @@ var appTitle = new Vue({
      {id: 4, active: true, link: "https://refind.com/jota_ele_ene", icon: "<img src='/images/Refind.png'>", class: "refind"}
     ],
     links2: [
-     {id: 1, active: true, link: "https://empresas.blogthinkbig.com/author/jose-luis-nunez-diaz/", icon: "T", class: "think-big"},
-     {id: 2, active: true, link: "https://github.com/jota-ele-ene/", icon: "<i class='fab fa-github'></i>", class: ""},
-     {id: 3, active: true, link: "https://codepen.io/jota_ele_ene", icon: "<i class='fab fa-codepen'></i>", class: ""},
+     {id: 1, active: true, link: "https://unsplash.com/@jota_ele_ene", icon: "<i class='fab fa-unsplash'></i>", class: ""},
+     {id: 2, active: true, link: "https://empresas.blogthinkbig.com/author/jose-luis-nunez-diaz/", icon: "T", class: "think-big"},
+     {id: 3, active: true, link: "https://github.com/jota-ele-ene/", icon: "<i class='fab fa-github'></i>", class: ""},
+     {id: 4, active: true, link: "https://codepen.io/jota_ele_ene", icon: "<i class='fab fa-codepen'></i>", class: ""},
     ]
   }
 });
