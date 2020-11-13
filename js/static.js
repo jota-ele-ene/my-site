@@ -115,7 +115,7 @@ template: `
       //var url = 'https://tiny.cc/x4i1mz';    
       var url = getRandomImageDataURL();
       fetch(url)
-      fetch(url+this.getOrientation())
+      //fetch(url+this.getOrientation())
         .then((res) => res.json())
         .then((res) => {
           vm.imageStatus = "dataLoaded";
