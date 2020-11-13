@@ -112,9 +112,9 @@ template: `
     loadImage() {
       var vm = this;
       var app_id = ''
-      var url = 'https://tiny.cc/x4i1mz';    
-      //var url = getRandomImageDataURL();
-      //fetch(url)
+      //var url = 'https://tiny.cc/x4i1mz';    
+      var url = getRandomImageDataURL();
+      fetch(url)
       fetch(url+this.getOrientation())
         .then((res) => res.json())
         .then((res) => {
