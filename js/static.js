@@ -112,8 +112,8 @@ template: `
     loadImage() {
       var vm = this;
       var app_id = ''
-      var url = 'https://jln.bz/my';    
-      //var url = getRandomImageDataURL();
+      //var url = 'http://jln.bz/my';    
+      var url = getRandomImageDataURL();
       //fetch(url)
       fetch(url+this.getOrientation())
         .then((res) => res.json())
