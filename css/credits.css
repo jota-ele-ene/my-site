@@ -39,7 +39,7 @@
   font-family:sans-serif;
   display:inline-block;
       font-size: 0.8em;
-    color: #ccc;
+    color: #888;
 }
 @media all and (max-width: 1024px) {
   * {
@@ -53,5 +53,5 @@
   }
 }
 #credits-box a{
-  color:#ccc;
+  color:#888;
 }
