@@ -13,8 +13,20 @@
   font-size: 4em;
   z-index:10;
 }
+.subtitle {
+  position: relative;
+  color: white;
+    font-size: 1em;
+    font-weight: lighter;
+    font-family: monospace;
+  margin: 2em 30%;  
+  z-index:10;
+}
 @media all and (max-width: 1024px) {
   .title {
     font-size:7em;
   }
+  .subtitle {
+      margin:10%;
+    }
 }
