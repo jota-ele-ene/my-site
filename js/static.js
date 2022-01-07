@@ -1,6 +1,6 @@
-//BackgroundCheck.init({
-//  targets: '.ca-icon,.title'
-//});
+BackgroundCheck.init({
+  targets: '.ca-icon,.title,.subtitle'
+});
 
 
 const profile = Vue.component('profile', {
@@ -111,6 +111,7 @@ template: `
     }, 
     imageLoadedAndShowed() {
       this.imageShowed = true;
+      BackgroundCheck.refresh();
     },
     loadImage() {
       var vm = this;
