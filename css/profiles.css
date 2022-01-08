@@ -98,7 +98,7 @@
 
 @media all and (max-width: 1024px) {
  .ca-more{
-     display:grid;
+     /*display:grid;*/
  }
  .ca-menu li{
      width: 100px;
