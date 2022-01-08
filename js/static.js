@@ -11,20 +11,20 @@ var appTitle = new Vue({
     intro: null,
     showMenu: true,
     links1: [
-     {id: 1, active: true, link: "https://twitter.com/jota_ele_ene", icon: "<i class='fab fa-twitter'></i>", class: ""},
+     //{id: 1, active: true, link: "https://twitter.com/jota_ele_ene", icon: "<i class='fab fa-twitter'></i>", class: ""},
      {id: 2, active: true, link: "https://www.linkedin.com/in/jotaeleene/", icon: "<i class='fab fa-linkedin'></i>", class: ""},
-     {id: 3, active: true, link: "https://medium.com/@jota_ele_ene", icon: "<i class='fab fa-medium'></i>", class: ""},
+     {id: 3, active: true, link: "https://empresas.blogthinkbig.com/author/jose-luis-nunez-diaz/", icon: "<img src='/images/blog.png'>", class: "refind"},
      {id: 4, active: true, link: "https://refind.com/jota_ele_ene", icon: "<img src='/images/Refind.png'>", class: "refind"}
     ],
     links2: [
      {id: 1, active: true, link: "https://unsplash.com/@jota_ele_ene", icon: "<i class='fab fa-unsplash'></i>", class: ""},
-     {id: 2, active: true, link: "https://empresas.blogthinkbig.com/author/jose-luis-nunez-diaz/", icon: "<img src='/images/blog.png'>", class: "refind"},
+     //{id: 2, active: true, link: "https://medium.com/@jota_ele_ene", icon: "<i class='fab fa-medium'></i>", class: ""},
      {id: 3, active: true, link: "https://github.com/jota-ele-ene/", icon: "<i class='fab fa-github'></i>", class: ""},
      {id: 4, active: true, link: "https://codepen.io/jota_ele_ene", icon: "<i class='fab fa-codepen'></i>", class: ""},
     ]
   },
   created() {
-  	this.intro = "Si me buscabas me has encontrado. Soy <b>José Luis Núñez</b>.<br> Si quieres conocerme, visita mi perfil en <a href='https://www.linkedin.com/in/jotaeleene/' class='target' target='_blank'>Linkedin</a>.<br> Me cuesta pensar que pueda interesarte algo de lo que hago, pero si es el caso revisa algunas cosas de las que cuento <a href='https://empresas.blogthinkbig.com/author/jose-luis-nunez-diaz/'  class='target' target='_blank'>aquí</a>. Te encontrarás muchas cosas sobre innovación y últimamente sobre cadenas y bloques. <br>También necesito pasear por El Retiro como una droga, así que de vez en cuando intento capturar el momento y saco fotos. También te las dejo por <a href='https://unsplash.com/collections/3693334/el-retiro' target='_blank'  class='target'>aquí</a>.";
+  	this.intro = "Si me buscabas me has encontrado. Soy <b>José Luis Núñez</b>.<br> Encuéntrame en <a href='https://www.linkedin.com/in/jotaeleene/' class='target' target='_blank'>Linkedin</a>, lee <a href='https://empresas.blogthinkbig.com/author/jose-luis-nunez-diaz/'  class='target' target='_blank'>alguno de mis posts</a> o revisa alguna de mis fotos de <a href='https://unsplash.com/collections/3693334/el-retiro' target='_blank'  class='target'>El Retiro</a>.";
   }
 });
 
@@ -107,13 +107,13 @@ template: `
     },
     imageLoadedAndShowed() {
       this.imageShowed = true;
-      var background = document.querySelector('.image');
+      document.querySelector('.title-div').classList.add("background--light");
       //console.log(background);
-      BackgroundCheck.init({
-        targets: '.target',
-        images: background
-      });
-      BackgroundCheck.refresh();
+      //BackgroundCheck.init({
+      //  targets: '.title-div',
+      //  images: background
+      //});
+      //BackgroundCheck.refresh();
     },
     loadImage() {
       var vm = this;

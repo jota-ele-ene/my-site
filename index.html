@@ -14,13 +14,12 @@
 
 <div class="title-div" v-cloak>
 <!--  <div @mouseover="showMenu = !showMenu" class="title"> -->
-  <div class="title target">
+  <div class="title">
       <span>{{ greeting }}</span>
   </div>
-  <div class="subtitle target">  <span v-html="intro"></span></div>
+  <div class="subtitle">  <span v-html="intro"></span></div>
 
-<!-----
-    <div class="ca-more">
+ <div class="ca-more">
    <ul class="ca-menu extra_margin_left_row1">
     <li v-for="profile in links1">
      <profile :profile="profile"></profile>
@@ -32,7 +31,6 @@
     </li>
    </ul>
   </div>
----->
 
 </div>
 
@@ -56,7 +54,7 @@
   -->
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.min.js"></script>
-<script src="js/background-check.min.js"></script>
+<!--<script src="js/background-check.min.js"></script>-->
 <script src="js/temporary.js"></script>
 <script src="js/static.js"></script>
 

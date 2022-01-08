@@ -5,34 +5,43 @@
 .title-div {
     margin: 10% auto;
     text-align: center;
+    border: 4px;
+    width: 40%;
+    padding: 1em;
+    position: relative;
+    z-index:1;
 }
 .title {
-  font-family: "Roboto Slab", sans-serif;
+  color:white;
   position: relative;
-  color: white;
+  font-family: "Roboto Slab", sans-serif;
   font-size: 4em;
   z-index:10;
 }
 .subtitle {
+  color:white;
   position: relative;
-  color: white;
-    font-size: 1em;
+    font-size: 1.2em;
     font-weight: lighter;
     font-family: monospace;
-  margin: 2em 30%;
+  margin: 2em;
   z-index:10;
 }
 .subtitle a {
   color: white;
 }
-.background--light {
-  color:black!important;
+.background--light, .background--complex {
+    background: rgba(25, 25, 25, .55);
+  -webkit-transition: all 2.5s linear;
+-moz-transition: all 2.5s linear;
+-o-transition: all 2.5s linear;
+transition: all 2.5s linear;
 }
 .background--dark {
-  color:white;
-}
-.background--complex {
-  color:white;
+  -webkit-transition: all 2.5s linear;
+-moz-transition: all 2.5s linear;
+-o-transition: all 2.5s linear;
+transition: all 2.5s linear;
 }
 @media all and (max-width: 1024px) {
   .title {
