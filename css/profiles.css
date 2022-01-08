@@ -16,6 +16,12 @@
   }
 }
 @media all and (max-width: 1024px) {
+  .ca-more {
+    height: 105px;
+  }
+  .extra_margin_left_row1 {
+    margin-inline-start: 3em;
+  }
   .extra_margin_left_row2 {
     /*margin-inline-start: 100px;*/
   }

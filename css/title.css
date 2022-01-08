@@ -47,6 +47,9 @@ transition: all 2.5s linear;
   .title {
     font-size:7em;
   }
+  .title-div {
+      width: 80%;
+  }
   .subtitle {
       margin:10%;
     }
