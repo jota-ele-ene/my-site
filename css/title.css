@@ -19,8 +19,20 @@
     font-size: 1em;
     font-weight: lighter;
     font-family: monospace;
-  margin: 2em 30%;  
+  margin: 2em 30%;
   z-index:10;
+}
+.subtitle a {
+  color: white;
+}
+.background--light {
+  color:black!important;
+}
+.background--dark {
+  color:white;
+}
+.background--complex {
+  color:white;
 }
 @media all and (max-width: 1024px) {
   .title {

@@ -1,11 +1,7 @@
-BackgroundCheck.init({
-  targets: '.ca-icon,.title,.subtitle'
-});
-
 
 const profile = Vue.component('profile', {
  props: ['profile'],
- template: `<a :href="profile.link"><span class="ca-icon" v-html="profile.icon" :class="profile.class"></span></a>` 
+ template: `<a :href="profile.link"><span class="ca-icon target" v-html="profile.icon" :class="profile.class"></span></a>`
  });
 
 var appTitle = new Vue({
@@ -28,31 +24,31 @@ var appTitle = new Vue({
     ]
   },
   created() {
-  	this.intro = "Si me buscabas me has encontrado. Soy <b>José Luis Núñez</b>.<br> Si quieres conocerme, visita mi perfil en <a href='https://www.linkedin.com/in/jotaeleene/' style='color: white;' target='_blank'>Linkedin</a>.<br> Me cuesta pensar que pueda interesarte algo de lo que hago, pero si es el caso revisa algunas cosas de las que cuento <a href='https://empresas.blogthinkbig.com/author/jose-luis-nunez-diaz/' target='_blank' style='color: white;'>aquí</a>. Te encontrarás muchas cosas sobre innovación y últimamente sobre cadenas y bloques. <br>También necesito pasear por El Retiro como una droga, así que de vez en cuando intento capturar el momento y saco fotos. También te las dejo por <a href='https://unsplash.com/collections/3693334/el-retiro' target='_blank' style='color: white;'>aquí</a>.";
+  	this.intro = "Si me buscabas me has encontrado. Soy <b>José Luis Núñez</b>.<br> Si quieres conocerme, visita mi perfil en <a href='https://www.linkedin.com/in/jotaeleene/' class='target' target='_blank'>Linkedin</a>.<br> Me cuesta pensar que pueda interesarte algo de lo que hago, pero si es el caso revisa algunas cosas de las que cuento <a href='https://empresas.blogthinkbig.com/author/jose-luis-nunez-diaz/'  class='target' target='_blank'>aquí</a>. Te encontrarás muchas cosas sobre innovación y últimamente sobre cadenas y bloques. <br>También necesito pasear por El Retiro como una droga, así que de vez en cuando intento capturar el momento y saco fotos. También te las dejo por <a href='https://unsplash.com/collections/3693334/el-retiro' target='_blank'  class='target'>aquí</a>.";
   }
 });
 
 
-var BgComponent = Vue.extend({ 
+var BgComponent = Vue.extend({
 template: `
-  <div  class="container">  
-    
-    <transition name="fade" v-on:after-enter="imageLoadedAndShowed">  
+  <div  class="container">
+
+    <transition name="fade" v-on:after-enter="imageLoadedAndShowed">
       <div v-if="active" @mouseover="disallowToggle" @transitionend="allowToggle"
-           :style="{ backgroundImage: 'url(' + imageSrc + ')' }" 
-     :class="{image_showed: imageShowed, image: true}">  
-      </div> 
+           :style="{ backgroundImage: 'url(' + imageSrc + ')' }"
+     :class="{image_showed: imageShowed, image: true}">
+      </div>
     </transition>
 
-  <a style="top: 0; right: 0; position: fixed; height: 50px; width: 50px;" 
+  <a style="top: 0; right: 0; position: fixed; height: 50px; width: 50px;"
      :href="imageSrc" @click="download_request" rel="nofollow" download>
   </a>
 
-  <div v-if="active" id="credits-box"> 
+  <div v-if="active" id="credits-box">
     <div :class="{out : noFaInfo}">
     <i  @mouseover="showCredits = !showCredits" class="fas fa-info-circle"></i>
-    </div>  
-    <transition name="slide-fade1" v-on:enter="noFaInfo=true" v-on:after-leave="noFaInfo=false"> 
+    </div>
+    <transition name="slide-fade1" v-on:enter="noFaInfo=true" v-on:after-leave="noFaInfo=false">
       <div v-if="showCredits" class="credits">
         <div class="font-credits">
             <span @click="showCredits = !showCredits">Photo credits: {{imageLocation}} by <a :href="imageUserName" target="_blank"> {{imageFullName}}</a> via <a :href="imageUnsplash" target="_blank" >Unsplash</a></span>
@@ -65,7 +61,7 @@ template: `
 </container>
 `,
   data: function () {
-    return { 
+    return {
       active:false,
       showCredits: false,
       noFaInfo: false,
@@ -83,14 +79,14 @@ template: `
       imageUnsplash: '',
       imageLocation: '',
       imageStatus: '',
-      error: '', 
+      error: '',
     }
   },
   methods: {
-    toggle() { 
+    toggle() {
 	//console.log("entering toggle - refer: "+this.$attrs['refer']+"; active: "+this.active+"; canToggle: "+this.canToggle);
       if (this.canToggle) {
-        this.active = !this.active;  
+        this.active = !this.active;
         if (!this.active) this.loadImage();
       }
 	//console.log("exiting toggle - refer: "+this.$attrs['refer']+"; active: "+this.active+"; canToggle: "+this.canToggle);
@@ -108,15 +104,21 @@ template: `
         this.scaling = true;
         hub.$emit('togglenotallowed');
      }
-    }, 
+    },
     imageLoadedAndShowed() {
       this.imageShowed = true;
+      var background = document.querySelector('.image');
+      //console.log(background);
+      BackgroundCheck.init({
+        targets: '.target',
+        images: background
+      });
       BackgroundCheck.refresh();
     },
     loadImage() {
       var vm = this;
       var app_id = ''
-      //var url = 'http://jln.bz/my';    
+      //var url = 'http://jln.bz/my';
       var url = getRandomImageDataURL();
       //fetch(url)
       fetch(url+this.getOrientation())
@@ -140,6 +142,7 @@ template: `
             reader.readAsDataURL(blob);
             reader.onload = evt => {
               let img = new Image();
+              img.setAttribute('crossorigin', '');
               img.onload = () => {
                 this.imageSize = img.width + "x" + img.height;
                 this.imageSrc = evt.target.result;
@@ -153,19 +156,19 @@ template: `
             reader.onerror = evt => {
               console.error(evt);
             }
-        });      
-            
+        });
+
         })
         .catch(function (error) {
           console.log("dataLoadingError:"+error);
-          vm.imageStatus = 'dataLoadingError'; 
-          vm.error = error; 
+          vm.imageStatus = 'dataLoadingError';
+          vm.error = error;
         });
     },
     download_request() {
 	fetch("proxyimg.html?url="+encodeURI(this.imageDownload)).catch(function (error) {
           console.log("download_request(): error:"+error);
-        });;          
+        });;
     },
     getOrientation() {
     	if( document.documentElement.clientWidth > document.documentElement.clientHeight  ) {
@@ -189,7 +192,7 @@ var hub = new Vue();
 
 
 var bgApp = new Vue({
-  el: '.bg', 
+  el: '.bg',
   components: {
   'background-image': BgComponent
   },
@@ -200,15 +203,15 @@ var bgApp = new Vue({
   },
   methods: {
     toggle: function (){
-     	  this.$children[0].toggle();   
-     	  this.$children[1].toggle();  
-    }, 
+     	  this.$children[0].toggle();
+     	  this.$children[1].toggle();
+    },
     loadFirstImage: function (refer) {
 	    //console.log("loadFirstImage: "+refer);
       if (refer = "first")
-        this.$children[0].toggle();  
+        this.$children[0].toggle();
       else
-        this.$children[1].toggle();   
+        this.$children[1].toggle();
     },
     loop: function () {
       var that = this;
@@ -224,6 +227,4 @@ var bgApp = new Vue({
 	created: function() {
 		hub.$once('imageLoaded', this.loadFirstImage);
 	}
-}) 
-
-
+})
