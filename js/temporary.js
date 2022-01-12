@@ -1,3 +1,3 @@
 function getRandomImageDataURL() {
-  return "https://rnd-images.jln.bz/.netlify/functions/api?orientation=";
+  return "https://randomimg.jln.bz/api?orientation=";
 }
