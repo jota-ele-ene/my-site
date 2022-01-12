@@ -1,3 +1,3 @@
 function getRandomImageDataURL() {
-  return "https://randomimg.jln.bz/.netlify/functions/api?orientation=";
+  return "https://competent-edison-8543fa.netlify.app/.netlify/functions/api?orientation=";
 }
