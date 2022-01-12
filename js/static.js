@@ -117,8 +117,7 @@ template: `
     },
     loadImage() {
       var vm = this;
-      var app_id = ''
-      //var url = 'http://jln.bz/my';
+      var app_id = '';
       var url = getRandomImageDataURL();
       //fetch(url)
       fetch(url+this.getOrientation())
