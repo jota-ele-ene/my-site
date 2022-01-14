@@ -1,3 +1,3 @@
 function getRandomImageDataURL() {
-  return "http://randomimg.jln.bz?orientation=";
+  return "https://rnd-images.000webhostapp.com/?orientation=portrait";
 }
